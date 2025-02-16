@@ -6,7 +6,10 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new Views.ListaProduto());  
+
+            //MainPage = new AppShell();
+
         }
     }
 }
