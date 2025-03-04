@@ -30,9 +30,10 @@ namespace MauiAppListaCompras.Helpers
         {
             return _conn.Table<Produto>().ToListAsync();
         }
-        public Task<List<Produto>> Search(String p)
+        public Task<List<Produto>> Search(String q)
         {
-            string sql = "SELECT * FROM Produto WHERE Descricao LIKE '%" + q + "%'";
+            
+            string sql = "SELECT * FROM Produto WHERE descricao LIKE '%"+ q +"%'";
 
             return _conn.QueryAsync<Produto>(sql);
         }
