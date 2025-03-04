@@ -7,9 +7,20 @@
         <Label 
             Text="Em Andamento"
             FontSize="30" 
-            FontAttributes="Bold"
-            TextColor="DarkRed"
+            FontAttributes="Bold"            
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Image Source="dotnet_bot.png"
+               BackgroundColor="Red"
+               Aspect="Center"
+               ></Image>
+        <Image Source="dotnet_bot.png"
+       BackgroundColor="CadetBlue"
+       Aspect="Center"
+       ></Image>
+        <Image Source="dotnet_bot.png"
+       BackgroundColor="YellowGreen"
+       Aspect="Center"
+       ></Image>
     </VerticalStackLayout>
 </ContentPage>
