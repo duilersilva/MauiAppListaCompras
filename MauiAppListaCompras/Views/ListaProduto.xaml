@@ -5,7 +5,10 @@
              Title="ListaProduto">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Em Andamento"
+            FontSize="30" 
+            FontAttributes="Bold"
+            TextColor="DarkRed"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
