@@ -2,31 +2,62 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppListaCompras.Views.ListaProduto"
-             Title="Lista de Compras">
+             Title="lista de compras">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Somar"/>
+        <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1"/>
         <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
-    
+
     <VerticalStackLayout>
+        <SearchBar x:Name="txt_search" 
+                   Placeholder="Busca por Produtos"
+                   TextChanged="txt_search_TextChanged"/>
+        <ListView x:Name="lst_produtos">
+            <ListView.Header>
+                <Grid ColumnDefinitions="*, *, *, *, *,*">
+                    <Label Grid.Column="0" Text="ID"/>
+                    <Label Grid.Column="1" Text="Descrição"/>
+                    <Label Grid.Column="2" Text="Preço"/>
+                    <Label Grid.Column="3" Text="Quantidade"/>
+                    <Label Grid.Column="4" Text="Total"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Remover"Clicked="MenuItem_Clicked"/>
+                        </ViewCell.ContextActions>
+                        <Grid ColumnDefinitions="*, *, *, *, *,*">
+                            <Label Grid.Column="0" Text="{Binding Id}"/>
+                            <Label Grid.Column="1" Text="{Binding Descricao}"/>
+                            <Label Grid.Column="2" Text="{Binding Preco}"/>
+                            <Label Grid.Column="3" Text="{Binding Quantidade}"/>
+                            <Label Grid.Column="4" Text="{Binding Total}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
         <Label 
-            Text="Em Andamento"
-            FontSize="30" 
-            FontAttributes="Bold"            
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        Text="Em Andamento"
+        FontSize="30" 
+        FontAttributes="Bold"            
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
         <Image Source="dotnet_bot.png"
-               BackgroundColor="Red"
-               Aspect="Center"
-               ></Image>
+           BackgroundColor="Violet"
+           Aspect="Center"
+           ></Image>
         <Image Source="dotnet_bot.png"
-       BackgroundColor="CadetBlue"
-       Aspect="Center"
-       ></Image>
+   BackgroundColor="CadetBlue"
+   Aspect="Center"
+   ></Image>
         <Image Source="dotnet_bot.png"
-       BackgroundColor="YellowGreen"
-       Aspect="Center"
-       ></Image>
-    </VerticalStackLayout>
+   BackgroundColor="YellowGreen"
+   Aspect="Center"
+   ></Image>
+    </VerticalStackLayout>   
 </ContentPage>

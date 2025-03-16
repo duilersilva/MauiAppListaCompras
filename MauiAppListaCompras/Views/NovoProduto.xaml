@@ -19,8 +19,5 @@
         <Label Text="Preço Unitário:"/>
         <Entry x:Name="txt_preco" Keyboard="Numeric"/>
 
-
-
-
     </VerticalStackLayout>
 </ContentPage>
