@@ -37,5 +37,10 @@ namespace MauiAppListaCompras.Helpers
 
             return _conn.QueryAsync<Produto>(sql);
         }
+
+        internal async Task Delete(Produto produto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
