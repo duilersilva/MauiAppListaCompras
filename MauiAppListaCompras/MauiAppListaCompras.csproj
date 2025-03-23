@@ -79,6 +79,7 @@
 
 	<ItemGroup>
 	  <None Remove="hs_err_pid11088.log" />
+	  <None Remove="hs_err_pid9940.log" />
 	</ItemGroup>
 
 	<ItemGroup>
